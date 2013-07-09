@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Here you do your job. The first parameter will be a destination
+# already concatenated with the day of the week and the hour of the day.
+echo $1 # Will print something like ./2-Tuesday_08-33
+
+# The second one will be the day and hour it is being run.
+echo $2 # Will print something like 2-Tuesday_08-33
+
+
+# You can do a backup, for instance:
+# rm -rf $1
+# mkdir -p $1
+# mysqldump -u root mydatabase > $1/mydatabase.sql

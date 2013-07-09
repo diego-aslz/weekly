@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cur=$(dirname $0)
+if [[ $# > 0 ]]; then
+  dir=$1
+else
+  dir=$cur
+fi
+index=`date +"%w"`
+week=("Sunday" "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday")
+day=${week[$index]}
+day="$index-$day`date +"_%H-%M"`"
+dest="$dir/$day"
+
+$cur/execute $dest $day
